@@ -6,40 +6,32 @@
 
 # Hospital Readmissions & Length of Stay Analysis (SQL Project)
 
-This project analyzes synthetic hospital encounter data to explore
-30-day readmission patterns, length of stay, and utilization trends
-across patient demographics and hospital departments. It demonstrates
-SQL skills relevant to healthcare analytics, quality reporting, and
-population health.
+This project analyzes **synthetic hospital encounter data** to explore:
+
+- 30-day readmission patterns  
+- Length of stay (LOS)  
+- High-utilizer patients  
+- Differences by insurance type and age  
+- Department-level performance  
+
+It showcases SQL skills used in **healthcare analytics, quality reporting, and population health**.  
+_All data are fully synthetic and safe for portfolio use._
+
+---
 
 ## Files in This Repository
 
-  ------------------------------------------------------------------------------------
-  File                                Description
-  ----------------------------------- ------------------------------------------------
-  hospital_readmissions_project.sql   SQL script that creates tables, loads sample
-                                      data, and runs analysis queries
+| File | Description |
+|------|-------------|
+| hospital_readmissions_project.sql | SQL script that creates the schema, loads sample data, and runs analysis queries. |
+| hospital_readmissions.sqlite | SQLite database file containing all tables and sample data. |
+| screenshots/ | Folder containing screenshots of query outputs and dashboard views. |
 
-  hospital_readmissions.sqlite        SQLite database file containing all tables and
-                                      sample data
-  ------------------------------------------------------------------------------------
+---
 
-# Project Overview
+## Database Schema
 
-This project evaluates key hospital performance indicators, including:
-
--   30-day readmission rate
--   Average length of stay (LOS)
--   High-utilizer patients
--   Differences by insurance type
--   Differences by age group
--   Department-level performance
--   Encounter outcome distribution
-
-The dataset is synthetic and used for educational and portfolio
-purposes.
-
-# Database Schema
+Below is the ASCII schema diagram (shown using 4-space indentation so GitHub renders it correctly):
 
     +------------------+         +----------------------+
     |     Patients     |         |      Encounters      |
@@ -53,95 +45,81 @@ purposes.
     |                  |         | readmitted_30d       |
     +------------------+         +----------------------+
 
-# Data Dictionary
+---
 
-## Patients Table
+## Data Dictionary
 
-  Column           Description
-  ---------------- ------------------------------------------
-  patient_id       Unique identifier for each patient
-  gender           Male or Female
-  age_group        Age group category (18--39, 40--64, 65+)
-  insurance_type   Medicaid, Medicare, Private, Uninsured
+### **Patients Table**
 
-## Encounters Table
+| Column | Description |
+|--------|-------------|
+| patient_id | Unique identifier for each patient |
+| gender | Male or Female |
+| age_group | Age group category (18–39, 40–64, 65+) |
+| insurance_type | Medicaid, Medicare, Private, Uninsured |
 
-  -----------------------------------------------------------------------
-  Column                      Description
-  --------------------------- -------------------------------------------
-  encounter_id                 Unique encounter identifier
+---
 
-  patient_id                   Foreign key linking to the Patients table
+### **Encounters Table**
 
-  admit_date                   Hospital admission date
+| Column | Description |
+|--------|-------------|
+| encounter_id | Unique encounter identifier |
+| patient_id | Foreign key linked to Patients |
+| admit_date | Hospital admission date |
+| discharge_date | Hospital discharge date |
+| department | Department (Emergency, Oncology, Cardiology, etc.) |
+| outcome | Discharged, Transferred, Deceased |
+| readmitted_30d | Yes/No indicator for 30-day readmission |
 
-  discharge_date               Hospital discharge date
+---
 
-  department                   Department of care (Emergency, Oncology,
-                              Cardiology, etc.)
+## Analysis Questions Answered
 
-  outcome                      Discharged, Transferred, Deceased
+- How many total encounters occurred?  
+- What is the overall 30-day readmission rate?  
+- Which departments have the longest average LOS?  
+- Do readmission rates differ by insurance type?  
+- Which patients are high utilizers (multiple encounters)?  
+- Which departments have the highest readmission rates?  
+- Do readmissions vary by age group?  
+- What is the distribution of outcomes?
 
-  readmitted_30d               Yes/No indicator for 30-day readmission
-  -----------------------------------------------------------------------
+---
 
-# Analysis Questions Answered
+## Key Findings (From Synthetic Dataset)
 
-1.  How many total encounters occurred?
-2.  What is the overall 30-day readmission rate?
-3.  Which departments have the longest average length of stay?
-4.  Does readmission rate differ by insurance type?
-5.  Which patients have multiple encounters (high utilizers)?
-6.  Which departments have the highest readmission rates?
-7.  Do readmissions vary by age group?
-8.  What is the distribution of outcomes (discharged, deceased,
-    transferred)?
+- **Total encounters:** 15  
+- **30-day readmission rate:** ~20%  
+- **Departments with longest LOS:** Oncology and Neurology  
+- **Most readmissions:** Cardiology and Emergency  
+- **High utilizers:** Several patients with multiple encounters  
+- **Insurance differences:** Medicaid & Medicare have higher readmissions  
+- **Age differences:** 65+ group has higher readmission likelihood  
+- **Outcome distribution:** Majority discharged; fewer transfers & deaths  
 
-# Key Findings
+---
 
-### Total Encounters
+## How to Run This Project
 
-15 total encounters were recorded.
+### **Option A — SQLiteOnline (Browser)**
 
-### Overall 30-Day Readmission Rate
+1. Go to https://sqliteonline.com  
+2. Select **SQLite**  
+3. Paste the contents of hospital_readmissions_project.sql  
+4. Run the script  
+5. View outputs directly in the results window  
 
-Approximately 20 percent.
+---
 
-### Departments with the Longest LOS
+### **Option B — DB Browser for SQLite (Desktop)**
 
-Oncology and Neurology had the highest average LOS.
+1. Install DB Browser for SQLite  
+2. Open `hospital_readmissions.sqlite`  
+3. Browse the tables  
+4. Use the Execute SQL tab to run analysis queries  
 
-### Departments with Higher Readmissions
 
-Cardiology and Emergency showed elevated readmission frequency.
-
-### High-Utilizer Patients
-
-Several patients had multiple encounters, including 30-day readmissions.
-
-### Insurance Type Differences
-
-Medicaid and Medicare patients showed higher readmission patterns.
-
-### Age Group Differences
-
-Patients aged 65+ had higher readmission likelihood.
-
-# How to Run This Project
-
-## Option A --- SQLiteOnline (Web-Based)
-
-1.  Visit https://sqliteonline.com
-2.  Select SQLite
-3.  Paste or upload the hospital_readmissions_project.sql file
-4.  Run the script to create and populate the tables
-5.  Execute analysis queries
-
-## Option B --- DB Browser for SQLite (Desktop)
-
-1.  Install DB Browser for SQLite
-2.  Open the .sqlite file
-3.  Use the Execute SQL tab to run queries
 
 # Screenshots
 
