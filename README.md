@@ -157,6 +157,18 @@ Recommended images: - Output of SELECT \* FROM Encounters\
 -   Healthcare analytics reporting
 -   GitHub documentation and version control
 
+  ## Screenshots
+
+### 1. Raw Encounter Data
+![Screenshot 1](screenshots/%231%20screenshot.png)
+
+### 2. Readmission Rate Summary
+![Screenshot 2](screenshots/%232%20screenshot.png)
+
+### 3. Length of Stay by Department
+![Screenshot 3](screenshots/%233%20screenshot.png)
+
+
 # End of Project
 
 This project showcases core SQL skills used in healthcare analytics and
