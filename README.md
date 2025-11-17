@@ -1,3 +1,8 @@
+➡️ **View the full SQL script:**  
+[hospital_readmissions_project.sql](hospital_readmissions_project.sql)
+
+➡️ **Download the SQLite database (.db):**  
+[SQLite database](SQLite%20(1).db)
 
 # Hospital Readmissions & Length of Stay Analysis (SQL Project)
 
