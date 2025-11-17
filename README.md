@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/23572876/README.md)
+
 # Hospital Readmissions & Length of Stay Analysis (SQL Project)
 
 This project analyzes synthetic hospital encounter data to explore
@@ -23,12 +23,12 @@ population health.
 
 This project evaluates key hospital performance indicators, including:
 
--   30-day readmission rate\
--   Average length of stay (LOS)\
--   High-utilizer patients\
--   Differences by insurance type\
--   Differences by age group\
--   Department-level performance\
+-   30-day readmission rate
+-   Average length of stay (LOS)
+-   High-utilizer patients
+-   Differences by insurance type
+-   Differences by age group
+-   Department-level performance
 -   Encounter outcome distribution
 
 The dataset is synthetic and used for educational and portfolio
@@ -82,13 +82,13 @@ purposes.
 
 # Analysis Questions Answered
 
-1.  How many total encounters occurred?\
-2.  What is the overall 30-day readmission rate?\
-3.  Which departments have the longest average length of stay?\
-4.  Does readmission rate differ by insurance type?\
-5.  Which patients have multiple encounters (high utilizers)?\
-6.  Which departments have the highest readmission rates?\
-7.  Do readmissions vary by age group?\
+1.  How many total encounters occurred?
+2.  What is the overall 30-day readmission rate?
+3.  Which departments have the longest average length of stay?
+4.  Does readmission rate differ by insurance type?
+5.  Which patients have multiple encounters (high utilizers)?
+6.  Which departments have the highest readmission rates?
+7.  Do readmissions vary by age group?
 8.  What is the distribution of outcomes (discharged, deceased,
     transferred)?
 
@@ -126,16 +126,16 @@ Patients aged 65+ had higher readmission likelihood.
 
 ## Option A --- SQLiteOnline (Web-Based)
 
-1.  Visit https://sqliteonline.com\
-2.  Select SQLite\
-3.  Paste or upload the hospital_readmissions_project.sql file\
-4.  Run the script to create and populate the tables\
+1.  Visit https://sqliteonline.com
+2.  Select SQLite
+3.  Paste or upload the hospital_readmissions_project.sql file
+4.  Run the script to create and populate the tables
 5.  Execute analysis queries
 
 ## Option B --- DB Browser for SQLite (Desktop)
 
-1.  Install DB Browser for SQLite\
-2.  Open the .sqlite file\
+1.  Install DB Browser for SQLite
+2.  Open the .sqlite file
 3.  Use the Execute SQL tab to run queries
 
 # Screenshots
@@ -143,18 +143,18 @@ Patients aged 65+ had higher readmission likelihood.
 Place screenshots into a folder named `screenshots`.
 
 Recommended images: - Output of SELECT \* FROM Encounters\
-- Readmission-rate query output\
+- Readmission-rate query output
 - LOS by department output
 
 # Skills Demonstrated
 
--   SQL table creation and relationships\
--   Data modeling (fact and dimension tables)\
--   JOINs and aggregations\
--   Calculating LOS using date functions\
--   Readmission metric calculation\
--   Identifying high-utilizer patients\
--   Healthcare analytics reporting\
+-   SQL table creation and relationships
+-   Data modeling (fact and dimension tables)
+-   JOINs and aggregations
+-   Calculating LOS using date functions
+-   Readmission metric calculation
+-   Identifying high-utilizer patients
+-   Healthcare analytics reporting
 -   GitHub documentation and version control
 
 # End of Project
