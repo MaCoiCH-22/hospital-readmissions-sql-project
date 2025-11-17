@@ -145,11 +145,15 @@ Patients aged 65+ had higher readmission likelihood.
 
 # Screenshots
 
-Place screenshots into a folder named `screenshots`.
+### 1. Raw Encounter Data
+![Screenshot 1](screenshots/%231%20screenshot.png)
 
-Recommended images: - Output of SELECT \* FROM Encounters\
-- Readmission-rate query output
-- LOS by department output
+### 2. Readmission Rate Summary
+![Screenshot 2](screenshots/%232%20screenshot.png)
+
+### 3. Length of Stay by Department
+![Screenshot 3](screenshots/%233%20screenshot.png)
+
 
 # Skills Demonstrated
 
@@ -161,17 +165,6 @@ Recommended images: - Output of SELECT \* FROM Encounters\
 -   Identifying high-utilizer patients
 -   Healthcare analytics reporting
 -   GitHub documentation and version control
-
-  ## Screenshots
-
-### 1. Raw Encounter Data
-![Screenshot 1](screenshots/%231%20screenshot.png)
-
-### 2. Readmission Rate Summary
-![Screenshot 2](screenshots/%232%20screenshot.png)
-
-### 3. Length of Stay by Department
-![Screenshot 3](screenshots/%233%20screenshot.png)
 
 
 # End of Project
