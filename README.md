@@ -69,20 +69,20 @@ purposes.
   -----------------------------------------------------------------------
   Column                      Description
   --------------------------- -------------------------------------------
-  encounter_id                Unique encounter identifier
+  encounter_id                 Unique encounter identifier
 
-  patient_id                  Foreign key linking to the Patients table
+  patient_id                   Foreign key linking to the Patients table
 
-  admit_date                  Hospital admission date
+  admit_date                   Hospital admission date
 
-  discharge_date              Hospital discharge date
+  discharge_date               Hospital discharge date
 
-  department                  Department of care (Emergency, Oncology,
+  department                   Department of care (Emergency, Oncology,
                               Cardiology, etc.)
 
-  outcome                     Discharged, Transferred, Deceased
+  outcome                      Discharged, Transferred, Deceased
 
-  readmitted_30d              Yes/No indicator for 30-day readmission
+  readmitted_30d               Yes/No indicator for 30-day readmission
   -----------------------------------------------------------------------
 
 # Analysis Questions Answered
