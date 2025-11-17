@@ -7,11 +7,20 @@ It demonstrates SQL skills commonly used in healthcare analytics, quality report
 
 ## Files in This Repository
 
-| File | Description |
-|------|-------------|
-| hospital_readmissions_project.sql | Full SQL script: creates schema, loads sample data, and runs analysis queries |
-| hospital_readmissions.sqlite / SQLite(1).db | SQLite database file containing all tables and sample data |
-
+## Database Schema
+```
++------------------+         +----------------------+
+|     Patients     |         |      Encounters      |
++------------------+         +----------------------+
+| patient_id  PK   |  1   ─▶ | patient_id   FK      |
+| gender           |         | encounter_id   PK     |
+| age_group        |         | admit_date            |
+| insurance_type   |         | discharge_date        |
+|                  |         | department            |
+|                  |         | outcome               |
+|                  |         | readmitted_30d        |
++------------------+         +----------------------+
+```
 ---
 
 # Project Overview
